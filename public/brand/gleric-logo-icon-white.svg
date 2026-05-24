@@ -1,0 +1,12 @@
+<svg width="200" height="200" viewBox="0 0 200 200" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Gleric Studio icon">
+  <defs>
+    <linearGradient id="chrome-iw" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#ffffff"/>
+      <stop offset="55%" stop-color="#c9ccd4"/>
+      <stop offset="100%" stop-color="#8d9098"/>
+    </linearGradient>
+  </defs>
+  <!-- G letterform, centered -->
+  <path d="M148 62H88C63 62 50 79 50 112C50 145 63 162 88 162H148" stroke="url(#chrome-iw)" stroke-width="14" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+  <path d="M148 112H110" stroke="#e5e6eb" stroke-width="14" stroke-linecap="round"/>
+</svg>

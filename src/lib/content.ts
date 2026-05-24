@@ -1,155 +1,215 @@
-export const NAV_ITEMS = [
-  { label: "Werk",     href: "#showcase" },
-  { label: "Diensten", href: "#services"  },
-  { label: "Proces",   href: "#process"   },
-  { label: "Care+",    href: "#careplus"  },
-  { label: "Contact",  href: "#contact"   },
-] as const;
-
+// ─── Hero ──────────────────────────────────────────────────────────────────
 export const HERO = {
-  meta: "Nieuwe projecten · beschikbaar Q3 / Q4 2026",
-  metaRight: "Webstudio uit Nederland",
-  headline1: "Premium websites",
-  headline2: "voor Nederlandse bedrijven die",
-  headline3: "opvallen.",
-  sub: "Gleric Studio bouwt snelle, moderne en conversiegerichte websites voor kleine en middelgrote bedrijven. In-house ontworpen, op tijd opgeleverd, en gebouwd om klanten op te leveren.",
+  headline1:         "Premium websites",
+  headline2:         "voor",
+  headlineHighlight: "Nederlandse bedrijven",
+  headline3:         "die opvallen.",
+  sub:               "Gleric Studio bouwt snelle, moderne en conversiegerichte websites voor ambitieuze Nederlandse bedrijven. Vaste prijs. Geen verrassingen.",
+  bullets: [
+    "Vanaf €699 — vaste prijs",
+    "Oplevering in 2 – 5 weken",
+    "Mobile-first & razendsnel",
+    "Zelf bewerkbaar (optioneel)",
+  ],
   cta1: "Start jouw website",
-  cta2: "Bekijk onze aanpak",
-  cornerTL1: "52.37° N  ·  4.90° E",
-  cornerTL2: "Nederland",
-  cornerTR1: "EST · MMXXV",
-  cornerTR2: "Gleric Studio",
-} as const;
+  cta2: "Zo werken we",
+};
 
-export const TRUST_ITEMS = [
-  { icon: "sparkles",   label: "AI-ondersteunde ontwikkeling" },
-  { icon: "zap",        label: "Moderne frontend-stack"       },
-  { icon: "smartphone", label: "Mobile-first design"          },
-  { icon: "search",     label: "SEO-klare structuur"          },
-  { icon: "rocket",     label: "Snelle oplevering"            },
-  { icon: "git-branch", label: "Vercel & GitHub deploys"      },
-  { icon: "shield",     label: "Optionele maandelijkse Care+" },
-] as const;
+// ─── Trust pills ───────────────────────────────────────────────────────────
+export const TRUST_PILLS = [
+  { text: "Vaste, transparante prijs",          color: "var(--c-amber)" },
+  { text: "Oplevering in 2 – 5 weken",          color: "var(--c-blue)"  },
+  { text: "Mobile-first & Core Web Vitals",     color: "var(--c-sage)"  },
+  { text: "100% Nederlandstalige communicatie", color: "var(--c-rose)"  },
+  { text: "Persoonlijk contact — altijd",       color: "var(--c-amber)" },
+  { text: "SEO-klaar uit de doos",              color: "var(--c-blue)"  },
+  { text: "Zelf bewerkbaar via CMS",            color: "var(--c-sage)"  },
+];
 
-export const TRUST_HEADING = {
-  eyebrow: "Positionering · 001",
-  h2a: "Een eerlijke studio-aanpak.",
-  h2b: "Geen nepcijfers, geen templatewerk, geen agency-theater. Alleen websites die ook echt live gaan.",
-} as const;
+// ─── Services ──────────────────────────────────────────────────────────────
+export interface Service {
+  idx:      string;
+  name:     string;
+  tier:     "amber" | "blue" | "sage";
+  timeline: string;
+  price:    string;
+  featured: boolean;
+  badge:    string | null;
+  included: string[];
+}
 
-export const SERVICES = [
+export const SERVICES: Service[] = [
   {
-    idx: "01",
-    name: "Starter Website",
-    best: "Kleine bedrijven die een verzorgde, geloofwaardige online uitstraling nodig hebben.",
-    included: [
-      "Tot 5 essentiële pagina's",
-      "Custom one-page of multi-page design",
-      "Mobile-first responsive build",
-      "Basis SEO + Google Search Console",
-      "Contactformulier & WhatsApp-integratie",
-    ],
-    timeline: "2 – 3 weken",
-    price: "Vanaf €1.950",
+    idx:      "01",
+    name:     "Starter",
+    tier:     "amber",
+    timeline: "4 – 5 dagen",
+    price:    "Vanaf €699",
     featured: false,
-    badge: null,
+    badge:    null,
+    included: [
+      "Tot 5 pagina's",
+      "Responsief ontwerp",
+      "Contactformulier",
+      "Basis-SEO setup",
+      "Google Analytics",
+      "1 revisieronde",
+    ],
   },
   {
-    idx: "02",
-    name: "Business Website",
-    best: "Bedrijven die structuur, dienstenpagina's en duidelijke conversie nodig hebben.",
-    included: [
-      "Tot 10 pagina's incl. detailpagina's",
-      "Custom design system + UI-componenten",
-      "Performance-budget (Lighthouse 95+)",
-      "SEO-basis, sitemap, structured data",
-      "Analytics + lead-tracking dashboard",
-    ],
+    idx:      "02",
+    name:     "Business",
+    tier:     "blue",
     timeline: "3 – 5 weken",
-    price: "Vanaf €3.450",
+    price:    "Vanaf €1.500",
     featured: true,
-    badge: "Meest gekozen",
-  },
-  {
-    idx: "03",
-    name: "Premium + Care+",
-    best: "Bedrijven die een flagship-website willen met blijvende support en polish.",
+    badge:    "Meest gekozen",
     included: [
-      "Volledig custom, geen template-patronen",
-      "Animatie, beweging, micro-interacties",
-      "CMS voor bewerkbare content (optioneel)",
-      "Care+-onderhoud 6 maanden inbegrepen",
-      "Conversie-review na 3 maanden",
+      "Tot 12 pagina's",
+      "Maatwerk design",
+      "CMS (zelf bewerken)",
+      "Uitgebreide SEO",
+      "Conversie-optimalisatie",
+      "2 revisierondes",
+      "3 maanden Care+ gratis",
     ],
+  },
+  {
+    idx:      "03",
+    name:     "Premium",
+    tier:     "sage",
     timeline: "5 – 8 weken",
-    price: "Prijs op aanvraag",
+    price:    "Prijs op aanvraag",
     featured: false,
-    badge: null,
+    badge:    null,
+    included: [
+      "Onbeperkt pagina's",
+      "Volledig maatwerk",
+      "Headless CMS / API",
+      "Geavanceerde animaties",
+      "Performance-audit",
+      "Meerdere revisierondes",
+      "6 maanden Care+ gratis",
+    ],
   },
-] as const;
+];
 
+// ─── Industries ────────────────────────────────────────────────────────────
 export const INDUSTRIES = [
-  { icon: "shirt",    name: "Kleding & retail",       hint: "Boetieks, lookbooks, drops"              },
-  { icon: "sparkle",  name: "Car detailing & auto",    hint: "Detailers, garages, dealers"             },
-  { icon: "utensils", name: "Restaurants & cafés",     hint: "Menukaarten, reserveringen, brand sites" },
-  { icon: "hammer",   name: "Aannemers & vakmensen",   hint: "Bouw, installatie, afwerking"            },
-  { icon: "scissors", name: "Kappers & beauty",        hint: "Salons, studio's, boekingsflows"         },
-  { icon: "store",    name: "Lokale dienstverleners",  hint: "Schoonmakers, verhuizers, specialisten"  },
-  { icon: "car",      name: "Auto & dealers",          hint: "Showrooms, listings, lead-capture"       },
-  { icon: "globe",    name: "Iets anders op maat",     hint: "Vertel ons wat je bouwt"                 },
-] as const;
+  { icon: "👗", label: "Mode & Retail",        sub: "Webshops & lookbooks",       color: "var(--c-rose)"  },
+  { icon: "🚗", label: "Automotive",           sub: "Dealers & lease",             color: "var(--c-blue)"  },
+  { icon: "🏠", label: "Vastgoed",             sub: "Makelaars & ontwikkelaars",   color: "var(--c-amber)" },
+  { icon: "💪", label: "Health & Fitness",     sub: "Studios & coaches",           color: "var(--c-sage)"  },
+  { icon: "🍽️", label: "Horeca",               sub: "Restaurants & hotels",        color: "var(--c-rose)"  },
+  { icon: "⚖️", label: "Juridisch & Finance",  sub: "Kantoren & adviseurs",        color: "var(--c-blue)"  },
+  { icon: "🏗️", label: "Bouw & Ambacht",       sub: "Aannemers & installateurs",   color: "var(--c-amber)" },
+  { icon: "🎓", label: "Onderwijs & Coaching", sub: "Trainers & instituten",       color: "var(--c-sage)"  },
+];
 
-export const PROCESS_STEPS = [
-  {
-    n: "01",
-    title: "Intake",
-    body: "We starten met een gericht gesprek om je bedrijf, doelen, concurrenten en wat er nu niet werkt op je huidige site goed te begrijpen. Geen vage briefings — we gaan weg met een heldere scope.",
-    deliverables: ["Discovery-call (45–60 min)", "Doelen + randvoorwaarden document", "Scope & vaste offerte"],
-  },
-  {
-    n: "02",
-    title: "Designrichting",
-    body: "We vertalen je merk naar een high-fidelity designrichting. Één of twee routes, in context gepresenteerd, met echte copy en echte layouts. We itereren tot je er trots op bent.",
-    deliverables: ["1–2 visuele richtingen", "High-fidelity desktop & mobile", "Component- & typografiesysteem"],
-  },
-  {
-    n: "03",
-    title: "Build",
-    body: "We bouwen in een moderne, snelle frontend-stack met AI-ondersteunde tooling — daardoor blijft er meer tijd over voor wat er écht toe doet: motion, polish, copy, performance. Deploys via Vercel & GitHub.",
-    deliverables: ["Performance-budget (Lighthouse 95+)", "Staging-omgeving", "Pre-launch QA checklist"],
-  },
-  {
-    n: "04",
-    title: "Lancering & Support",
-    body: "We zetten de site live, dragen domein & analytics over, en lopen samen door hoe je content bewerkt. Daarna kun je zelfstandig verder — of op Care+ blijven voor maandelijkse updates en rust in je hoofd.",
-    deliverables: ["DNS, hosting & SSL setup", "Editor-overdracht sessie", "30-dagen post-launch venster"],
-  },
-] as const;
+// ─── Process ───────────────────────────────────────────────────────────────
+export interface ProcessStep {
+  n:        string;
+  title:    string;
+  color:    string;
+  desc:     string;
+  duration: string;
+}
 
-export const CARE_PLUS_ITEMS = [
-  { t: "Maandelijkse content-edits",   d: "Kleine tekst- en foto-updates binnen enkele werkdagen." },
-  { t: "Technische checks",            d: "Uptime, broken links, SSL, performance & toegankelijkheid." },
-  { t: "Performance-monitoring",       d: "Core Web Vitals, paginasnelheid en Lighthouse maandelijks gecontroleerd." },
-  { t: "Deployment-ondersteuning",     d: "Wij regelen Vercel deploys, DNS en rollback als er iets misgaat." },
-  { t: "Voorrang in support",          d: "Care+-klanten staan vooraan. We reageren binnen één werkdag." },
-  { t: "Transparante scope",           d: "Groter werk (nieuwe pagina's, features, redesigns) wordt apart geoffreerd — nooit stiekem." },
-] as const;
+export const PROCESS_STEPS: ProcessStep[] = [
+  {
+    n:        "01",
+    title:    "Intake",
+    color:    "var(--c-blue)",
+    desc:     "We bespreken jouw doelen, doelgroep en wensen in een gratis kennismaking. Geen verplichtingen.",
+    duration: "30 – 60 min",
+  },
+  {
+    n:        "02",
+    title:    "Design",
+    color:    "var(--c-amber)",
+    desc:     "We ontwerpen een uniek design op maat. Jij geeft feedback, wij verfijnen tot het perfect is.",
+    duration: "3 – 5 dagen",
+  },
+  {
+    n:        "03",
+    title:    "Build",
+    color:    "var(--c-sage)",
+    desc:     "We bouwen jouw website met moderne technologie. Razendsnel, veilig en toekomstbestendig.",
+    duration: "1 – 4 weken",
+  },
+  {
+    n:        "04",
+    title:    "Lancering",
+    color:    "var(--c-rose)",
+    desc:     "We lanceren jouw website, zorgen voor de technische setup en staan klaar voor nazorg.",
+    duration: "1 – 2 dagen",
+  },
+];
 
+// ─── Care+ ─────────────────────────────────────────────────────────────────
+export const CAREPLUS = {
+  eyebrow:  "Care+",
+  title:    "Wij houden jouw website gezond",
+  sub:      "Na de lancering verdient jouw website aandacht. Met Care+ zorgen Ricardo en Glen voor updates, beveiliging en ondersteuning — zodat jij je kunt focussen op je bedrijf.",
+  cta:      "Meer over Care+",
+  features: [
+    "Maandelijkse CMS- & plugin-updates",
+    "Uptime monitoring 24/7",
+    "Snelheidsoptimalisatie",
+    "SSL & beveiliging",
+    "1 uur aanpassingen per maand",
+    "Prioriteit support via WhatsApp",
+  ],
+};
+
+// ─── Showcase ──────────────────────────────────────────────────────────────
+export interface ShowcaseItem {
+  name:   string;
+  sector: string;
+  desc:   string;
+  bg:     string;
+  accent: string;
+  href?:  string;
+}
+
+export const SHOWCASE: ShowcaseItem[] = [
+  {
+    name:   "Vestique",
+    sector: "Mode & Retail",
+    desc:   "Premium fashion webshop met lookbook-editor en realtime voorraad.",
+    bg:     "oklch(0.22 0.05 30)",
+    accent: "var(--c-rose)",
+  },
+  {
+    name:   "AutoElite NL",
+    sector: "Automotive",
+    desc:   "Occasion-platform met AI-zoekfilter en financieringsmodule.",
+    bg:     "oklch(0.20 0.06 245)",
+    accent: "var(--c-blue)",
+  },
+  {
+    name:   "De Lokale Kapper",
+    sector: "Health & Lifestyle",
+    desc:   "Boekingssite met online agenda, cadeaubonnen en Google Reviews.",
+    bg:     "oklch(0.21 0.05 155)",
+    accent: "var(--c-sage)",
+  },
+];
+
+// ─── Contact ───────────────────────────────────────────────────────────────
 export const CONTACT_INFO = {
-  eyebrow: "Contact · 007",
-  headline: "Plan een kennismaking.",
-  email: "info@glericstudio.nl",
-  studio: "Nederland\nRemote-first, EU-breed",
-  response: "Binnen 1 werkdag\nMa – Vr",
-  availability: "Q3 / Q4 2026\nNieuwe projecten welkom",
-  languages: "Nederlands · English",
-} as const;
+  studio:    "Nederland\nRemote-first",
+  response:  "Binnen 1 werkdag\nMa – Vr",
+  werkgebied:"Heel Nederland\n& EU op aanvraag",
+  languages: "Nederlands\nEnglish\nEspañol",
+  email:     "info@glericstudio.nl",
+};
 
 export const CONTACT_OPTIONS = [
-  "Starter Website",
-  "Business Website",
-  "Premium + Care+",
+  "Starter",
+  "Business",
+  "Premium",
   "Redesign",
   "Alleen Care+",
   "Anders",
-] as const;
+];

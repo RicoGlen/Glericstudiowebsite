@@ -1,36 +1,30 @@
 import type { Metadata } from "next";
 import "./globals.css";
+import { Navbar } from "@/components/site/Navbar";
 
 export const metadata: Metadata = {
-  title: "Gleric Studio | Premium websites voor moderne bedrijven",
+  title: "Gleric Studio — Premium websites voor Nederlandse bedrijven",
   description:
-    "Gleric Studio bouwt moderne, snelle en professionele websites voor Nederlandse ondernemers.",
-  keywords: ["webdesign", "website laten maken", "webbureau Nederland", "Next.js", "Gleric Studio"],
-  authors: [{ name: "Gleric Studio" }],
+    "Gleric Studio bouwt snelle, moderne en conversiegerichte websites voor ambitieuze Nederlandse bedrijven. Vaste prijs. Oplevering in 2–5 weken.",
   openGraph: {
-    title: "Gleric Studio | Premium websites voor moderne bedrijven",
-    description:
-      "Gleric Studio bouwt moderne, snelle en professionele websites voor Nederlandse ondernemers.",
-    url: "https://glericstudio.nl",
-    siteName: "Gleric Studio",
+    title: "Gleric Studio",
+    description: "Premium websites voor Nederlandse bedrijven die opvallen.",
     locale: "nl_NL",
     type: "website",
   },
-  twitter: {
-    card: "summary_large_image",
-    title: "Gleric Studio | Premium websites voor moderne bedrijven",
-    description:
-      "Gleric Studio bouwt moderne, snelle en professionele websites voor Nederlandse ondernemers.",
-  },
-  metadataBase: new URL("https://glericstudio.nl"),
 };
 
 export default function RootLayout({
   children,
-}: Readonly<{ children: React.ReactNode }>) {
+}: {
+  children: React.ReactNode;
+}) {
   return (
     <html lang="nl">
-      <body>{children}</body>
+      <body>
+        <Navbar />
+        {children}
+      </body>
     </html>
   );
 }

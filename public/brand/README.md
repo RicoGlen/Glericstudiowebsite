@@ -8,8 +8,8 @@
 | `gleric-logo-full-black.svg` | Full lockup — black, for light backgrounds |
 | `gleric-logo-wordmark-white.svg` | Wordmark + STUDIO only — white, for dark backgrounds |
 | `gleric-logo-wordmark-black.svg` | Wordmark + STUDIO only — black, for light backgrounds |
-| `gleric-logo-icon-white.svg` | G-mark icon only — white, for dark backgrounds |
-| `gleric-logo-icon-black.svg` | G-mark icon only — black, for light backgrounds |
+| `gleric-logo-icon-white.svg` | GS monogram icon — white, for dark backgrounds |
+| `gleric-logo-icon-black.svg` | GS monogram icon — black, for light backgrounds |
 
 ## Usage guidelines
 
@@ -25,11 +25,12 @@
 - Minimum clear space: leave at least the height of the "G" letter on all sides
 
 ### Color
-- White versions use a subtle silver-chrome gradient — on screen this reads as premium metallic; on print it may flatten to solid white, which is intentional and correct
-- Black versions are straightforward black (#0a0a0a) with subtle dark gradients
+- White versions are flat solid `#f4f4f4` — no gradients, so the mark stays a single spot color for screen printing
+- Black versions are flat solid `#0a0a0a`
+- Service list and the divider use opacity (not a second color) for hierarchy — this survives a black/white print conversion cleanly
 
 ### Don't
 - Don't stretch or distort the logo
 - Don't place the white logo on a light background
-- Don't add drop shadows or effects in-layout — they're baked into the SVG where appropriate
+- Don't add gradients, drop shadows, or effects in-layout
 - Don't use raster (PNG/JPG) exports for print jobs over A5 size

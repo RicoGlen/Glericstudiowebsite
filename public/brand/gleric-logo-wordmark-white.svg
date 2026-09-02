@@ -1,27 +1,15 @@
 <svg width="870" height="260" viewBox="0 0 870 260" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Gleric Studio">
-  <defs>
-    <linearGradient id="chrome-ww" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#ffffff"/>
-      <stop offset="35%" stop-color="#f6f7fa"/>
-      <stop offset="55%" stop-color="#c9ccd4"/>
-      <stop offset="100%" stop-color="#8d9098"/>
-    </linearGradient>
-    <linearGradient id="soft-ww" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#ffffff" stop-opacity="0.95"/>
-      <stop offset="100%" stop-color="#b8bcc4" stop-opacity="0.8"/>
-    </linearGradient>
-  </defs>
-  <g stroke="url(#chrome-ww)" stroke-width="14" stroke-linecap="round" stroke-linejoin="round" fill="none">
+  <g stroke="#f4f4f4" stroke-width="14" stroke-linecap="round" stroke-linejoin="round" fill="none">
     <path d="M120 95H60C35 95 22 112 22 145C22 178 35 195 60 195H120"/>
-    <path d="M120 145H82" stroke="#e5e6eb"/>
+    <path d="M120 145H82"/>
     <path d="M190 95V195H265"/>
     <path d="M340 95H430"/>
-    <path d="M340 145H410" stroke="#e7e8e9"/>
-    <path d="M340 195H430" stroke="#e7e8e9"/>
+    <path d="M340 145H410"/>
+    <path d="M340 195H430"/>
     <path d="M500 195V95H580C610 95 625 108 625 132C625 156 610 168 580 168H500"/>
     <path d="M575 168L625 195"/>
-    <path d="M705 95V195" stroke="#86878b"/>
+    <path d="M705 95V195"/>
     <path d="M850 95H790C765 95 752 112 752 145C752 178 765 195 790 195H850"/>
   </g>
-  <text x="435" y="250" fill="url(#soft-ww)" font-family="Inter, Arial, Helvetica, sans-serif" font-size="34" font-weight="400" letter-spacing="28">STUDIO</text>
+  <text x="435" y="250" fill="#f4f4f4" font-family="Inter, Arial, Helvetica, sans-serif" font-size="34" font-weight="400" letter-spacing="28">STUDIO</text>
 </svg>

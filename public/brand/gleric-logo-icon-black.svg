@@ -1,4 +1,7 @@
 <svg width="200" height="200" viewBox="0 0 200 200" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Gleric Studio icon">
-  <path d="M148 62H88C63 62 50 79 50 112C50 145 63 162 88 162H148" stroke="#0a0a0a" stroke-width="14" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
-  <path d="M148 112H110" stroke="#3a3a3a" stroke-width="14" stroke-linecap="round"/>
+  <g stroke="#0a0a0a" stroke-width="16" stroke-linecap="round" stroke-linejoin="round" fill="none">
+    <path d="M96 65H66C48 65 38 78 38 100C38 122 48 135 66 135H96"/>
+    <path d="M96 100H70"/>
+    <path d="M168 76C168 64 156 58 142 58C128 58 118 65 118 77C118 90 130 95 146 99C162 103 174 109 174 123C174 136 163 143 148 143C134 143 122 137 119 125"/>
+  </g>
 </svg>
